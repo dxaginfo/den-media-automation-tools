@@ -1,0 +1,32 @@
+{
+  "gemini_api_key": "YOUR_GEMINI_API_KEY_HERE",
+  "gemini_model": "gemini-pro",
+  "logging": {
+    "level": "INFO",
+    "file": "logs/scene_validator.log",
+    "max_size_mb": 10,
+    "backup_count": 3
+  },
+  "validation": {
+    "max_content_length": 50000,
+    "severity_thresholds": {
+      "high": 1,
+      "medium": 3,
+      "low": 5
+    }
+  },
+  "output": {
+    "default_format": "html",
+    "report_directory": "reports"
+  },
+  "firebase": {
+    "enabled": false,
+    "config_path": "firebase_config.json"
+  },
+  "google_cloud": {
+    "enabled": false,
+    "project_id": "YOUR_GCP_PROJECT_ID",
+    "storage_bucket": "YOUR_GCS_BUCKET",
+    "credentials_path": "gcp_credentials.json"
+  }
+}
